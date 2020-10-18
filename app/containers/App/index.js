@@ -12,39 +12,38 @@ import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
-import FeaturePage from 'containers/FeaturePage/Loadable';
+// import FeaturePage from 'containers/FeaturePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
+import LeftSideBar from 'components/LeftSideBar';
 import Footer from 'components/Footer';
 
-import GlobalStyle from '../../global-styles';
+// import css
+import '../../assets/css/bootstrap.min.css';
+import '../../assets/css/core.css';
+import '../../assets/css/icons.css';
+import '../../assets/css/components.css';
+import '../../assets/css/pages.css';
+import '../../assets/css/menu.css';
+import '../../assets/css/responsive.css';
 
-const AppWrapper = styled.div`
-  max-width: calc(768px + 16px * 2);
-  margin: 0 auto;
-  display: flex;
-  min-height: 100%;
-  padding: 0 16px;
-  flex-direction: column;
-`;
+const AppWrapper = styled.div``;
 
 export default function App() {
   return (
     <AppWrapper>
-      <Helmet
-        titleTemplate="%s - React.js Boilerplate"
-        defaultTitle="React.js Boilerplate"
-      >
-        <meta name="description" content="A React.js Boilerplate application" />
+      <Helmet titleTemplate="covid19Reports" defaultTitle="covid19Reports">
+        <meta name="description" content="covid19Reports" />
       </Helmet>
       <Header />
+      <LeftSideBar />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/features" component={FeaturePage} />
-        <Route path="" component={NotFoundPage} />
+        {/* <Route path="/features" component={FeaturePage} />
+        <Route path="" component={NotFoundPage} /> */}
       </Switch>
       <Footer />
-      <GlobalStyle />
+      <NotFoundPage />
     </AppWrapper>
   );
 }

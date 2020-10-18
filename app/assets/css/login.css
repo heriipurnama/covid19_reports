@@ -1,0 +1,38 @@
+/* ===========
+   CSS for login
+ =============*/
+
+body {
+  background: none !important;
+}
+
+html {
+  background: url('../images/bgLogin_LMS.jpg') no-repeat center center fixed !important;
+  background-size: cover !important;
+  height: 100%;
+  overflow: hidden;
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  min-height: 24em;
+  justify-content: center;
+}
+
+.Aligner-item {
+  flex: 1;
+}
+
+.Aligner-item--fixed {
+  flex: none;
+  max-width: 50%;
+}
+
+.lbox {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  padding: 30px;
+  width: 350px;
+  margin: auto;
+}

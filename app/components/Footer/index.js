@@ -1,30 +1,14 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 
-import A from 'components/A';
-import LocaleToggle from 'containers/LocaleToggle';
-import Wrapper from './Wrapper';
-import messages from './messages';
-
-function Footer() {
+function footer() {
   return (
-    <Wrapper>
-      <section>
-        <FormattedMessage {...messages.licenseMessage} />
-      </section>
-      <section>
-        <LocaleToggle />
-      </section>
-      <section>
-        <FormattedMessage
-          {...messages.authorMessage}
-          values={{
-            author: <A href="https://twitter.com/mxstbr">Max Stoiber</A>,
-          }}
-        />
-      </section>
-    </Wrapper>
+    <footer
+      className="footer text-right"
+      style={{ marginRight: -5, color: '#32a83a', fontSize: 15 }}
+    >
+      <b>&copy; 2020, PT Codemi Global.</b>
+    </footer>
   );
 }
 
-export default Footer;
+export default footer;
